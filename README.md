@@ -2,7 +2,7 @@
 
 Objetivo: O desafio consiste em criar uma rede de containers com um servidor Nginx que atua como proxy para acessar uma página web simples, desenvolvida em Node.js. A página web em Node.js possui duas funções principais: inserir registros em um banco de dados MySQL e exibir o último registro criado.
 
-  ![Diagrama sem nome drawio](https://github.com/diazdiego1/desafio-nginx_node_mysql-full-cycle/assets/140215970/b9de7b85-5aac-4a7c-9d03-699c87a40401)
+  ![Diagrama sem nome drawio](https://github.com/diazdiego1/desafio_2_full_cycle/assets/140215970/752cec41-010d-4c61-9f78-7ebd2246697a)
 
 1. Proxy Nginx:
        - Funciona como intermediário entre os clientes e o servidor Node.js.
