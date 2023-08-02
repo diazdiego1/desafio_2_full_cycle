@@ -25,8 +25,6 @@ Objetivo: O desafio consiste em criar uma rede de containers com um servidor Ngi
       - O servidor responde à requisição do cliente, exibindo uma página HTML com o título "Full Cycle" e a informação do "último registro criado", contendo o "id" e o "nome" do registro.
       - Essas são as principais funcionalidades da página desenvolvida no desafio do curso Full Cycle. O Nginx atua como intermediário, direcionando as requisições para o servidor Node.js, que, por sua vez, gerencia a inserção de registros no banco de dados e exibe a informação do último registro na página web.
 
-        ![image](https://github.com/diazdiego1/desafio-nginx_node_mysql-full-cycle/assets/140215970/d0e3152f-f891-4d31-9b28-338ed4d6a452)
-
 ### Como estruturar o seu projeto para que tudo funcione corretamente:
 Para que o projeto funcione corretamente com base no arquivo docker-compose.yml fornecido, a estrutura do projeto deve ser organizada da seguinte forma:
 ```
@@ -60,5 +58,7 @@ desafio-nginx_node_mysql-full-cycle/
 4. Diretório mysql:
 
      - Aqui você pode criar um diretório para armazenar os arquivos relacionados ao banco de dados MySQL, como os dados do banco de dados, arquivos de configuração etc.
+
+      **Não esquecer de excluir o arquivo ```.gitkeep``` do diretório ao fazer download para que a aplicação funcione corretamente**
 
 Certifique-se de que todos os arquivos e diretórios estejam localizados na mesma pasta raiz que o arquivo docker-compose.yml. Dessa forma, o Docker Compose poderá localizar todos os recursos corretamente e executar o projeto conforme o arquivo de configuração.
