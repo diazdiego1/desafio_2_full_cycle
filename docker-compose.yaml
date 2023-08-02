@@ -17,14 +17,15 @@ services:
       - app
 
   app:
-    image: diazdiego/node:latest
+    build:
+      context: ./node
+      dockerfile: dockerfile.prd
     container_name: node
-    entrypoint: dockerize -wait tcp://db:3306 -timeout 20s  node # Inicia o dockerize como entrypoint temporário, depois chama o entrypoint oficial
-    command: index.js
-    networks:
-      - node-network
+    entrypoint: ["sh", "-c", "dockerize -wait tcp://db:3306 -timeout 20s && npm install express mysql && node index.js"]
     volumes:
       - ./node:/usr/src/app
+    networks:
+      - node-network
     tty: true
     depends_on: # esta seção serve para dizer que o container do node não pode subir antes do container do mysql ele define uma ordem. Porém ele só verifica se o container está em execução e não que o serviço está ativo.
       - db
