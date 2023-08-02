@@ -17,9 +17,7 @@ services:
       - app
 
   app:
-    build:
-      context: ./node
-      dockerfile: dockerfile.prd
+    image: diazdiego/node:latest
     container_name: node
     entrypoint: ["sh", "-c", "dockerize -wait tcp://db:3306 -timeout 20s && npm install express mysql && node index.js"]
     volumes:
